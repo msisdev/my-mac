@@ -105,3 +105,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 fastfetch
+
+# fnm
+FNM_PATH="/Users/boxcolli/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/boxcolli/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# fnm https://github.com/Schniz/fnm#shell-setup
+eval "$(fnm env --use-on-cd --shell zsh)"
